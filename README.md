@@ -1,2 +1,2 @@
 # MY-DSA-PROJECT
-THIS PROJECT CONTAIN 2 CASE STUDY DATA ANALYZED. Please find each in named respectively in their folders
+## I have uploade each case study in different folders for easy access
