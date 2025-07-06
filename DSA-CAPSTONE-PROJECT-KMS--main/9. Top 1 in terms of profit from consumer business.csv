@@ -1,0 +1,2 @@
+﻿Row_ID,Order_ID,Order_Date,Order_Priority,Order_Quantity,Sales,Discount,Ship_Mode,Profit,Unit_Price,Shipping_Cost,Customer_Name,Province,Region,Customer_Segment,Product_Category,Product_Sub_Category,Product_Name,Product_Container,Product_Base_Margin,Ship_Date
+4190,29766,3/21/2009,Medium,13,89061.05,0,Regular Air,27220.69,6783.02,24.49,Emily Phan,New Brunswick,Atlantic,Consumer,Technology,Office Machines,Polycom ViewStation™ ISDN Videoconferencing Unit,Large Box,0.39,3/22/2009

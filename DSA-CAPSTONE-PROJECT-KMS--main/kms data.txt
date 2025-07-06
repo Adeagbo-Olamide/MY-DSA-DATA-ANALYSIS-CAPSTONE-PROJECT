@@ -1,0 +1,81 @@
+create database kms
+select *from [kms Sql Case study]
+
+
+
+select (Product_Category) ,sum (sales) as [Total Sales] from [KMS Sql Case Study]
+group by Product_Category
+order by [Total Sales]desc
+
+select *from [kms Sql Case study]
+
+-----2a. TOP 3 REGIONS
+SELECT TOP 3 (REGION), SUM (sales) AS [Total Sales]
+from [KMS Sql Case Study]
+group by Region
+order by [Total Sales]DESC
+
+-----2b. BOTTOM 3 REGIONS
+SELECT TOP 3 (REGION), SUM (sales) AS [Total Sales]
+from [KMS Sql Case Study]
+group by Region
+order by [Total Sales]ASC
+
+-----3. TOTAL SALES IN ONTARIO
+SELECT Product_Sub_Category,SUM(SALES) AS [TOTAL SALES]
+from [KMS Sql Case Study]
+WHERE Region= 'ONTARIO'
+GROUP BY Product_Sub_Category
+
+-----4.
+
+ALTER table[KMS Sql case study]
+alter column order_quantity int
+
+SELECT TOP 10 CUSTOMER_NAME,SHIPPING_COST,SALES,DISCOUNT,UNIT_PRICE,SUM(ORDER_QUANTITY) AS [TOTAL ORDER QUANTITY]
+FROM [KMS Sql Case Study]
+GROUP BY CUSTOMER_NAME,SHIPPING_COST,SALES,DISCOUNT,UNIT_PRICE
+ORDER BY [TOTAL ORDER QUANTITY]DESC
+
+-------5.
+select ship_mode,sum(shipping_cost)as [Total shipping cost]
+from [KMS Sql Case Study]
+group by Ship_Mode
+order by [Total shipping cost]desc
+
+------6
+select customer_segment,product_sub_category,customer_name,sum(sales) as [Total sales]
+from[KMS Sql Case Study]
+group by customer_segment,product_sub_category,customer_name
+order by[Total sales]desc
+
+-----7
+select top 1 *from [KMS Sql Case Study]
+where Customer_Segment='small business'
+order by Sales desc
+
+-----8
+select top 1 *from [KMS Sql Case Study]
+where Customer_Segment='corporate'
+order by Order_Quantity desc
+
+----9
+select top 1 *from [KMS Sql Case Study]
+where Customer_Segment='consumer'
+order by Profit desc
+
+-----10
+select *from [KMS Sql Case Study]
+select *from [dbo].[Order_Status]
+
+select [KMS Sql Case Study].Customer_Name,
+[KMS Sql Case Study].Product_Category,
+[KMS Sql Case Study].Order_ID,
+Order_Status.Order_ID,
+Order_Status.Status
+
+from [KMS Sql Case Study]
+join Order_Status
+on [KMS Sql Case Study].Row_ID = Order_Status.Order_ID
+
+
